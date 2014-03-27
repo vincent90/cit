@@ -26,7 +26,7 @@
       <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/expense/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="11" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+            <state line="10" column="11" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="442">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="7" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.36744186" vertical-offset="347" max-vertical-offset="1207">
+            <state line="39" column="7" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.39186046" vertical-offset="326" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="script.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/script.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="5" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+            <state line="3" column="5" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tax/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="47" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+            <state line="14" column="47" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1173">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="tax.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/tax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="10" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+            <state line="24" column="10" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1139">
               <folding />
             </state>
           </provider>
@@ -458,14 +458,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="960" height="1040" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2447034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2447034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -787,7 +787,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="7" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.36744186" vertical-offset="347" max-vertical-offset="1207">
+        <state line="39" column="7" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.39186046" vertical-offset="326" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
