@@ -63,4 +63,13 @@ Route::group(["before" => "auth"], function()
         "as"   => "tax/show",
         "uses" => "TaxController@show"
     ]);
+
+    Route::POST("/tax/taxInfo", [
+        "as"   => "tax/show",
+        "uses" => "TaxController@getTax"
+    ]);
+
+    Route::POST("/tax/taxUpdate", [
+        "uses" => "TaxController@updateTax"
+    ]);
 });
