@@ -36,8 +36,15 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4" style="height:300px;padding:10px;text-align: center;">
-				<div><h2>Current Rate</h2></div>
-				<div class="bigText">18 %</div>
+				<div class="centeredInput">
+					<h2>Type</h2>
+					<select multiple class="form-control multiple" style="font-size:3em;">
+						<option>TPS</option>
+						<option>TVQ</option>
+						<option>CTI</option>
+						<option>Other</option>
+					</select>
+				</div>
 			</div>
 			<div class="col-md-4" style="height:300px;padding:10px;text-align: center;">
 				<div><h2>New Rate</h2></div>
