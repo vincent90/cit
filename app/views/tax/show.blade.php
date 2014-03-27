@@ -17,6 +17,7 @@
 						<option>BC</option>
 						<option>IPE</option>
 						<option>NFL</option>
+						<option>Manitoba</option>
 					</select>
 				</div>
 			</div>
