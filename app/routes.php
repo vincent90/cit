@@ -72,4 +72,9 @@ Route::group(["before" => "auth"], function()
     Route::POST("/tax/taxUpdate", [
         "uses" => "TaxController@updateTax"
     ]);
+
+    Route::get("/user/view", [
+        "as"   => "user/view",
+        "uses" => "UserController@getInfo"
+    ]);
 });

@@ -128,4 +128,12 @@ class UserController
         Auth::logout();
         return Redirect::route("user/login");
     }
+
+    public function getInfo(){
+        //charger les expenses
+        $users = User::all();
+
+        //charger la vue et envoyer les expenses
+        return View::make('user/view')->with('users',$users);
+    }
 }
