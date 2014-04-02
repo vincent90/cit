@@ -33,7 +33,7 @@
                         <td>{{ $value->date }}</td>
                         <td>{{ $value->categoryId }}</td>
                         <td>{{ $value->comments }}</td>
-                        <td>{{ $value->total }}</td>
+                        <td>{{number_format( $value->total,2)}}</td>
 
                         <!-- we will also add show, edit, and delete buttons -->
                         <td>

@@ -14,10 +14,10 @@
     		{{ Form::label('categoryId', 'Type') }}
     		{{ Form::text('categoryId',  null, array('class' => 'form-control','required')) }}
     	</div>
-<div class="form-group">
-    {{ Form::label('date', 'Date') }}
-    {{ Form::text('date', null, array('class' => 'form-control','required')) }}
-</div>
+        <div class="form-group">
+            {{ Form::label('date', 'Date') }}
+            {{ Form::text('date', null, array('class' => 'form-control','required')) }}
+        </div>
     	<div class="form-group">
     		{{ Form::label('comments', 'Description') }}
     		{{ Form::text('comments',  null, array('class' => 'form-control','required')) }}
