@@ -9,7 +9,7 @@
 
 	<div class="form-group">
 		{{ Form::label('categoryId', 'Type') }}
-		{{ Form::text('categoryId', Input::old('type'), array('class' => 'form-control','required')) }}
+		{{ Form::select('categoryId',   array('Mileage' => 'Mileage', 'Food' => 'Food', 'Travel' => 'Travel'),null, array('class' => 'form-control','required')) }}
 	</div>
 <div class="form-group">
     {{ Form::label('date', 'Date') }}
