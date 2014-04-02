@@ -52,6 +52,11 @@ Route::group(["before" => "auth"], function()
     Route::delete("/expense/{id}", [
         "as"   => "expense",
         "uses" => "ExpenseController@destroy"
+
+    ]);
+    Route::get("/expense/stats", [
+        "as"   => "expense/stats",
+        "uses" => "ExpenseController@getStats"
     ]);
 
     Route::get("/expense/{id}", [
@@ -97,4 +102,6 @@ Route::group(["before" => "auth"], function()
         "as"   => "user",
         "uses" => "UserController@destroy"
     ]);
+
+
 });

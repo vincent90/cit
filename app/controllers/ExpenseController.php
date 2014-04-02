@@ -21,6 +21,10 @@ class ExpenseController extends BaseController{
        return View::make('expense.create');
     }
 
+    public function getStats(){
+        return View::make('expense/stats');
+    }
+
     public function addExpense(){
         // validate
         // read more on validation at http://laravel.com/docs/validation
