@@ -44,7 +44,7 @@ Route::group(["before" => "auth"], function()
         "uses" => "ExpenseController@edit"
     ]);
 
-    Route::put("/expense/update/{id}", [
+    Route::put("/expense/{id}", [
         "as"   => "expense",
         "uses" => "ExpenseController@update"
     ]);

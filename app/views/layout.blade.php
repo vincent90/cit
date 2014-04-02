@@ -5,6 +5,8 @@
 		{{ HTML::style('css/bootstrap.min.css') }}
 		{{ HTML::style('css/style.css') }}
 		{{ HTML::style('css/ui-lightness/jquery-ui-1.10.4.custom.min.css') }}
+        {{ HTML::style('css/theme.bootstrap_2.css') }}
+        {{ HTML::style('css/datepicker.css') }}
 
         <title>
             Tutorial

@@ -9,29 +9,25 @@
 {{ Form::model($expense, array('route' => array('expense', $expense->id), 'method' => 'PUT')) }}
 
 		<div class="form-group">
-    		{{ Form::label('province', 'Province') }}
-    		{{ Form::text('province', null, array('class' => 'form-control')) }}
+    		{{ Form::label('date', 'Date') }}
+    		{{ Form::text('date', null, array('class' => 'form-control','required')) }}
     	</div>
 
     	<div class="form-group">
-    		{{ Form::label('comments', 'Commentaire') }}
-    		{{ Form::text('comments',  null, array('class' => 'form-control')) }}
+    		{{ Form::label('categoryId', 'Type') }}
+    		{{ Form::text('categoryId',  null, array('class' => 'form-control','required')) }}
     	</div>
 
     	<div class="form-group">
-    		{{ Form::label('start', 'Départ') }}
-    		{{ Form::text('start',  null, array('class' => 'form-control')) }}
+    		{{ Form::label('comments', 'Description') }}
+    		{{ Form::text('comments',  null, array('class' => 'form-control','required')) }}
     	</div>
 
     	<div class="form-group">
-    		{{ Form::label('destination', 'Destination') }}
-    		{{ Form::text('destination',  null, array('class' => 'form-control')) }}
+    		{{ Form::label('total', 'Montant') }}
+    		{{ Form::text('total',  null, array('class' => 'form-control','required')) }}
     	</div>
 
-    	<div class="form-group">
-    		{{ Form::label('kilometers', 'Kilomètrage') }}
-    		{{ Form::text('kilometers',  null, array('class' => 'form-control')) }}
-    	</div>
 
 	{{ Form::submit('Modifier la dépense', array('class' => 'btn btn-primary')) }}
 

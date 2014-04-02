@@ -6,32 +6,33 @@
 {{ Form::open(array('url' => 'expense')) }}
 
 	<div class="form-group">
-		{{ Form::label('province', 'Province') }}
-		{{ Form::text('province', Input::old('province'), array('class' => 'form-control')) }}
+		{{ Form::label('date', 'Date') }}
+		{{ Form::text('date', Input::old('date'), array('class' => 'form-control datepicker','required','data-date-format' => 'yyyy/mm/dd')) }}
 	</div>
 
 	<div class="form-group">
-		{{ Form::label('comments', 'Commentaire') }}
-		{{ Form::text('comments', Input::old('comments'), array('class' => 'form-control')) }}
+		{{ Form::label('categoryId', 'Type') }}
+		{{ Form::text('categoryId', Input::old('type'), array('class' => 'form-control','required')) }}
 	</div>
 
 	<div class="form-group">
-		{{ Form::label('start', 'Départ') }}
-		{{ Form::text('start', Input::old('start'), array('class' => 'form-control')) }}
+		{{ Form::label('comments', 'Description') }}
+		{{ Form::text('comments', Input::old('comments'), array('class' => 'form-control','required')) }}
 	</div>
 
 	<div class="form-group">
-		{{ Form::label('destination', 'Destination') }}
-		{{ Form::text('destination', Input::old('destination'), array('class' => 'form-control')) }}
+		{{ Form::label('total', 'Montant') }}
+		{{ Form::text('total', Input::old('total'), array('class' => 'form-control','required')) }}
 	</div>
 
-	<div class="form-group">
-		{{ Form::label('kilometers', 'Kilomètrage') }}
-		{{ Form::text('kilometers', Input::old('kilometers'), array('class' => 'form-control')) }}
-	</div>
 
-	{{ Form::submit('Ajouter la dépense', array('class' => 'btn btn-primary')) }}
+	{{ Form::submit('Ajouter la dépense', array('class' => 'btn btn-primary','required')) }}
 
 {{ Form::close() }}
 
+@stop
+
+@section("script")
+    @parent
+    {{HTML::script('js/expense.js')}}
 @stop

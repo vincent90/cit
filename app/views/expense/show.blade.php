@@ -4,16 +4,14 @@
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
-<h1>Showing {{ $expense->comments }}</h1>
+<h1>Visualisation de la dépense :  {{ $expense->comments }}</h1>
 
 	<div class="jumbotron text-center">
-		<h2>{{ $expense->comments }}</h2>
 		<p>
-			<strong>Province:</strong> {{ $expense->province }}<br>
-			<strong>Comments:</strong> {{ $expense->comments }}<br>
-			<strong>Start:</strong> {{ $expense->start }}<br>
-			<strong>Destination:</strong> {{ $expense->destination }}<br>
-			<strong>Kilometers:</strong> {{ $expense->kilometers }}
+			<strong>Date:</strong> {{ $expense->date }}<br>
+			<strong>Type:</strong> {{ $expense->categoryId }}<br>
+			<strong>Description:</strong> {{ $expense->comments }}<br>
+			<strong>Montant:</strong> {{ $expense->total }}<br>
 		</p>
 	</div>
 

@@ -1,6 +1,8 @@
 @extends("layout")
 @section("content")
 
+
+
 @if(Session::has('message'))
 <div id="dialog-succes" title="Basic dialog">
   <p>{{ Session::get('message') }}</p>
@@ -15,7 +17,7 @@
 
     <div class="row mainContent">
         <div class="col-md-8">
-            <table class="table table-striped table-bordered">
+            <table id="tableExpense" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <td>Date</td>
@@ -80,5 +82,8 @@
 @stop
 @section("script")
     @parent
+
+    {{HTML::script('js/jquery.tablesorter.min.js')}}
+    {{HTML::script('js/jquery.tablesorter.widgets.min.js')}}
     {{HTML::script('js/expense.js')}}
 @stop

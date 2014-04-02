@@ -25,11 +25,10 @@ class ExpenseController extends BaseController{
         // validate
         // read more on validation at http://laravel.com/docs/validation
         $rules = array(
-            'province'          => 'required',
-            'comments'          => 'required',
-            'start'             => 'required',
-            'destination'       => 'required',
-            'kilometers'        => 'required|numeric'
+            'date'                  => 'required',
+            'categoryId'            => 'required',
+            'comments'              => 'required',
+            'total'                 => 'required'
         );
         $validator = Validator::make(Input::all(), $rules);
 
@@ -41,16 +40,16 @@ class ExpenseController extends BaseController{
         } else {
             // store
             $expense = new Expense;
-            $expense->province          = Input::get('province');
-            $expense->comments          = Input::get('comments');
-            $expense->start             = Input::get('start');
-            $expense->destination       = Input::get('destination');
-            $expense->kilometers        = Input::get('kilometers');
+            $expense->date          = Input::get('date');
+            $expense->categoryId          = Input::get('categoryId');
+            $expense->comments             = Input::get('comments');
+            $expense->total       = Input::get('total');
+
             $expense->save();
 
             // redirect
             Session::flash('message', 'La dépense à été ajoutée avec succès!');
-            return Redirect::to('expense');
+            return Redirect::to('expense/view');
         }
 
     }
@@ -59,11 +58,10 @@ class ExpenseController extends BaseController{
         // validate
         // read more on validation at http://laravel.com/docs/validation
         $rules = array(
-            'province'          => 'required',
-            'comments'          => 'required',
-            'start'             => 'required',
-            'destination'       => 'required',
-            'kilometers'        => 'required|numeric'
+            'date'          => 'required',
+            'categoryId'          => 'required',
+            'comments'             => 'required',
+            'total'       => 'required'
         );
         $validator = Validator::make(Input::all(), $rules);
 
@@ -75,16 +73,16 @@ class ExpenseController extends BaseController{
         } else {
             // store
             $expense = Expense::find($id);
-            $expense->province          = Input::get('province');
-            $expense->comments          = Input::get('comments');
-            $expense->start             = Input::get('start');
-            $expense->destination       = Input::get('destination');
-            $expense->kilometers        = Input::get('kilometers');
+            $expense->date          = Input::get('date');
+            $expense->categoryId          = Input::get('categoryId');
+            $expense->comments             = Input::get('comments');
+            $expense->total       = Input::get('total');
+
             $expense->save();
 
             // redirect
             Session::flash('message', 'La dépense à été modifiée avec succès!');
-            return Redirect::to('expense');
+            return Redirect::to('expense/view');
         }
     }
 
@@ -103,7 +101,7 @@ class ExpenseController extends BaseController{
 
         //redirect
         Session::flash('message', 'La dépense a été supprimer avec success!');
-        return Redirect::to('expense');
+        return Redirect::to('expense/view');
     }
 
     public function show($id){
