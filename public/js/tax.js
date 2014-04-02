@@ -69,13 +69,19 @@ jQuery( document ).ready( function( $ ) {
 
                 if(msg == "1"){
                     $(function() {
-                        $( "#dialog-succes" ).dialog({modal: true, title : 'Succès!'});
+                        $( "#dialog-succes" ).dialog({modal: true, title : 'Succès!',open: function(){
+                            var closeBtn = $('.ui-dialog-titlebar-close');
+                            closeBtn.append('<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span>');
+                        }});
                         $( "#dialog-succes" ).html("La taxe à été mise-à-jour!");
                     });
                 }else{
 
                     $(function() {
-                        $( "#dialog-succes" ).dialog({modal: true, title : 'Erreur!'});
+                        $( "#dialog-succes" ).dialog({modal: true, title : 'Erreur!',open: function(){
+                            var closeBtn = $('.ui-dialog-titlebar-close');
+                            closeBtn.append('<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span>');
+                        }});
                         $( "#dialog-succes" ).html("Veuillez contacter l'administrateur");
                     });
                 }
@@ -83,7 +89,10 @@ jQuery( document ).ready( function( $ ) {
             });
         }else {
             $(function() {
-                $( "#dialog-succes" ).dialog({modal: true, title : 'Erreur!'});
+                $( "#dialog-succes" ).dialog({modal: true, title : 'Erreur!',open: function(){
+                    var closeBtn = $('.ui-dialog-titlebar-close');
+                    closeBtn.append('<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span>');
+                }});
                 $( "#dialog-succes" ).html("Vous devez choisir toutes les options de tax");
             });
         }
