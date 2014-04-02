@@ -45,6 +45,35 @@ class UserController
         return View::make("user/login", $data);
     }
 
+    public function create(){
+        // validate
+        // read more on validation at http://laravel.com/docs/validation
+        $rules = array(
+            'username'          => 'required',
+            'email'             => 'required',
+            'role'              => 'required'
+        );
+        $validator = Validator::make(Input::all(), $rules);
+
+        // process the login
+        if ($validator->fails()) {
+            return Redirect::to('user/view')
+                ->withErrors($validator)
+                ->withInput(Input::except('password'));
+        } else {
+            // store
+            $user = new User;
+            $user->username          = Input::get('username');
+            $user->email          = Input::get('email');
+            $user->role             = Input::get('role');
+            $user->save();
+
+            // redirect
+            Session::flash('message', 'La dépense à été ajoutée avec succès!');
+            return Redirect::to('user/view');
+        }
+    }
+
     public function requestAction()
     {
         $data = [
@@ -74,6 +103,15 @@ class UserController
         return View::make("user/request", $data);
     }
 
+    public function destroy($id){
+        //delete
+        $user = User::find($id);
+        $user->delete();
+
+        //redirect
+        return Redirect::to('user/view');
+
+    }
     public function resetAction()
     {
         $token = "?token=" . Input::get("token");
@@ -135,5 +173,40 @@ class UserController
 
         //charger la vue et envoyer les expenses
         return View::make('user/view')->with('users',$users);
+    }
+
+    public function edit($id){
+        //prendre le user
+        $user = User::find($id);
+
+        //ouvrir le form de modification, et lui donner le user
+        return View::make('user.edit')->with('user',$user);
+    }
+
+    public function update($id){
+        // validate
+        // read more on validation at http://laravel.com/docs/validation
+        $rules = array(
+            'username'          => 'required',
+            'email'          => 'required'
+        );
+        $validator = Validator::make(Input::all(), $rules);
+
+        // process the login
+        if ($validator->fails()) {
+            return Redirect::to('user/' . $id . '/edit')
+                ->withErrors($validator)
+                ->withInput(Input::except('password'));
+        } else {
+            // store
+            $user = User::find($id);
+            $user->username          = Input::get('username');
+            $user->email          = Input::get('email');
+            $user->save();
+
+            // redirect
+            Session::flash('message', 'L usager à été modifiée avec succès!');
+            return Redirect::to('user/view');
+        }
     }
 }

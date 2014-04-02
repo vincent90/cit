@@ -77,4 +77,24 @@ Route::group(["before" => "auth"], function()
         "as"   => "user/view",
         "uses" => "UserController@getInfo"
     ]);
+
+    Route::any("/user/{id}/edit", [
+        "as"   => "user/{id}/edit",
+        "uses" => "UserController@edit"
+    ]);
+
+    Route::put("/user/update/{id}", [
+        "as"   => "user",
+        "uses" => "UserController@update"
+    ]);
+
+    Route::any("/user/create", [
+        "as"   => "user/create",
+        "uses" => "UserController@create"
+    ]);
+
+    Route::delete("/user/{id}", [
+        "as"   => "user/view",
+        "uses" => "UserController@destroy"
+    ]);
 });

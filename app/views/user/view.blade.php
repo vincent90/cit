@@ -35,14 +35,29 @@
 
 
                     <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-                    <a class="btn btn-small btn-success" href="{{ URL::to('user/' . $value->id) }}">Voir</a>
-
+                   <!--
+                   <a class="btn btn-small btn-success" href="{{ URL::to('user/' . $value->id) }}">Voir</a>
+                    !-->
                     <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
                     <a class="btn btn-small btn-info" href="{{ URL::to('user/' . $value->id . '/edit') }}">Modifier</a>
 
                 </td>
             </tr>
             @endforeach
+            <tr>
+
+            {{ Form::open(array('url' => 'user/create')) }}
+            <td>{{ Form::text('username',  null, array('class' => 'form-control')) }}</td>
+            <td>{{ Form::text('email',  null, array('class' => 'form-control')) }}</td>
+            <td>{{ Form::text('role',  null, array('class' => 'form-control')) }}</td>
+            <td>{{ Form::submit('Créer utilisateur', array('class' => 'btn btn-primary')) }}</td>
+            {{ Form::close() }}
+
+
+            </tr>
+
+
+
             </tbody>
         </table>
     </div>

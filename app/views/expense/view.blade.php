@@ -36,6 +36,7 @@
 
 
 		        <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
+
 				<a class="btn btn-small btn-success" href="{{ URL::to('expense/' . $value->id) }}">Voir</a>
 
 				<!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
