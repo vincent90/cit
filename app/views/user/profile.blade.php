@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-2 rotate" style="background:#9b59b6;height:300px;padding:10px;"><a href=""><img src="{{asset('assets/images/settings.png')}}" style="width:100%"></a></div>
-            <div class="col-md-4 rotate" style="background:#e67e22;height:300px;padding:10px;"><a href=""><img src="{{asset('assets/images/back.png')}}" style="width:100%"></a></div>
+            <div class="col-md-4 rotate" style="background:#e67e22;height:300px;padding:10px;"><a href="{{ URL::route("user/logout") }}"><img src="{{asset('assets/images/back.png')}}" style="width:100%"></a></div>
         </div>
     </div> <!-- /container -->
 
