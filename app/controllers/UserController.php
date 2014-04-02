@@ -69,7 +69,7 @@ class UserController
             $user->save();
 
             // redirect
-            Session::flash('message', 'La dépense à été ajoutée avec succès!');
+            Session::flash('message', 'L\'usager à été créé avec succès!');
             return Redirect::to('user/view');
         }
     }
@@ -109,6 +109,7 @@ class UserController
         $user->delete();
 
         //redirect
+        Session::flash('message', 'L\'usager à été supprimé avec succès!');
         return Redirect::to('user/view');
 
     }
@@ -157,7 +158,6 @@ class UserController
 
     public function profileAction()
     {
-        Log::info('dans profil');
         return View::make("user/profile");
     }
 
@@ -205,7 +205,7 @@ class UserController
             $user->save();
 
             // redirect
-            Session::flash('message', 'L usager à été modifiée avec succès!');
+            Session::flash('message', 'L\'usager à été modifié avec succès!');
             return Redirect::to('user/view');
         }
     }

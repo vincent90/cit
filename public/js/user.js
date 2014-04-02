@@ -1,7 +1,7 @@
 jQuery( document ).ready( function( $ ) {
 
     $(function() {
-        $( "#dialog-succes" ).dialog();
+        $( "#dialog-succes" ).dialog({modal: true, title : 'Succès'});
     });
 
     $('.edit-link').click(function(){

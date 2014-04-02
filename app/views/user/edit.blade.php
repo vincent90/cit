@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
 
-<h1>Edit {{ $user->username }}</h1>
+<h1>Modification de :  {{ $user->username }}</h1>
 
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
@@ -11,15 +11,15 @@
 
 		<div class="form-group">
     		{{ Form::label('username', 'Nom') }}
-    		{{ Form::text('username', null, array('class' => 'form-control')) }}
+    		{{ Form::text('username', null, array('class' => 'form-control', 'required')) }}
     	</div>
 
     	<div class="form-group">
     		{{ Form::label('email', 'Courriel') }}
-    		{{ Form::text('email',  null, array('class' => 'form-control')) }}
+    		{{ Form::email('email',  null, array('class' => 'form-control', 'required')) }}
     	</div>
 
-	{{ Form::submit('Modifier l usager', array('class' => 'btn btn-primary')) }}
+	{{ Form::submit('Modifier l\'usager', array('class' => 'btn btn-primary')) }}
 
 {{ Form::close() }}
 
