@@ -7,6 +7,10 @@
 </div>
 @endif
 
+<div id="dialog" title="Dialog Title" style="display:none"> Some text</div>
+
+
+
 <div class="row">
     <div class="col-md-4"><img src="{{asset('assets/images/CiternesExpert.png')}}" style="width:100%;"></div>
     <div class="col-md-4 col-md-offset-4"><a href = "{{ URL::route("user/logout") }}"class="btn btn-lg btn-primary btn-block btn-flat" type="submit">Logout</button></a></div>
@@ -41,6 +45,7 @@
                                 <a class="btn btn-small btn-success" href="{{ URL::to('user/' . $value->id) }}">Voir</a>
                             !-->
                             <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
+                            <a class="edit-link" href="{{ URL::to('user/' . $value->id . '/edit') }}"><button>Edit</button></a>
                             <a class="btn btn-small btn-info" href="{{ URL::to('user/' . $value->id . '/edit') }}">Modifier</a>
                         </td>
                     </tr>
