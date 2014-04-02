@@ -1,7 +1,10 @@
 jQuery( document ).ready( function( $ ) {
 
     $(function() {
-        $( "#dialog-succes" ).dialog( {modal : true, title : "Succès!"});
+        $( "#dialog-succes" ).dialog( {modal : true, title : "Succès!",open: function(){
+            var closeBtn = $('.ui-dialog-titlebar-close');
+            closeBtn.append('<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span>');
+        }});
     });
 
     $('.edit-link').click(function(){
