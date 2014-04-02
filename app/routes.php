@@ -94,7 +94,7 @@ Route::group(["before" => "auth"], function()
     ]);
 
     Route::delete("/user/{id}", [
-        "as"   => "user/view",
+        "as"   => "user",
         "uses" => "UserController@destroy"
     ]);
 });
