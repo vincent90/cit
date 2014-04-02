@@ -59,7 +59,7 @@ jQuery( document ).ready( function( $ ) {
         var tax = $("#taxInput").val();
 
 
-        if(province != "" && category != "" && type != ""){
+        if(province != null && category != null && type != null){
 
             $.ajax({
                 type: "POST",
@@ -68,11 +68,23 @@ jQuery( document ).ready( function( $ ) {
             }).done(function( msg ) {
 
                 if(msg == "1"){
-                    //alert("succes");
+                    $(function() {
+                        $( "#dialog-succes" ).dialog({modal: true, title : 'Succès!'});
+                        $( "#dialog-succes" ).html("La taxe à été mise-à-jour!");
+                    });
                 }else{
-                    alert("Erreur");
+
+                    $(function() {
+                        $( "#dialog-succes" ).dialog({modal: true, title : 'Erreur!'});
+                        $( "#dialog-succes" ).html("Veuillez contacter l'administrateur");
+                    });
                 }
 
+            });
+        }else {
+            $(function() {
+                $( "#dialog-succes" ).dialog({modal: true, title : 'Erreur!'});
+                $( "#dialog-succes" ).html("Vous devez choisir toutes les options de tax");
             });
         }
 

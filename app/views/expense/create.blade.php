@@ -5,16 +5,16 @@
 
 {{ Form::open(array('url' => 'expense')) }}
 
-	<div class="form-group">
-		{{ Form::label('date', 'Date') }}
-		{{ Form::text('date', Input::old('date'), array('class' => 'form-control datepicker','required','data-date-format' => 'yyyy/mm/dd')) }}
-	</div>
+
 
 	<div class="form-group">
 		{{ Form::label('categoryId', 'Type') }}
 		{{ Form::text('categoryId', Input::old('type'), array('class' => 'form-control','required')) }}
 	</div>
-
+<div class="form-group">
+    {{ Form::label('date', 'Date') }}
+    {{ Form::text('date', Input::old('date'), array('class' => 'form-control datepicker','required','data-date-format' => 'yyyy/mm/dd')) }}
+</div>
 	<div class="form-group">
 		{{ Form::label('comments', 'Description') }}
 		{{ Form::text('comments', Input::old('comments'), array('class' => 'form-control','required')) }}

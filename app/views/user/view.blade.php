@@ -53,7 +53,7 @@
                         {{ Form::open(array('url' => 'user/create')) }}
                         <td>{{ Form::text('username',  null, array('class' => 'form-control','required')) }}</td>
                         <td>{{ Form::email('email',  null, array('class' => 'form-control','required')) }}</td>
-                        <td>{{ Form::select('role',  array('admin' => 'Administrateur', 'user' => 'Usager'),null, array('class' => 'form-control','required')) }}</td>
+                        <td>{{ Form::select('role',  array('admin' => 'admin', 'user' => 'user'),null, array('class' => 'form-control','required')) }}</td>
                         <td>{{ Form::submit('Créer utilisateur', array('class' => 'btn btn-primary')) }}</td>
                         {{ Form::close() }}
                     </tr>
