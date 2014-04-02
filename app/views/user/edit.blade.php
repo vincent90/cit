@@ -6,6 +6,7 @@
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
+
 {{ Form::model($user, array('route' => array('user', $user->id), 'method' => 'PUT')) }}
 
 		<div class="form-group">

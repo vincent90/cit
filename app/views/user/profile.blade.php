@@ -18,7 +18,7 @@
             <div class="col-md-4 col-md-offset-4"><a href="{{ URL::route("user/logout") }}" class="btn btn-lg btn-primary btn-block btn-flat" type="submit">Logout</button></a>
         </div>
         <div class="row mainContent">
-            <div class="col-md-4 rotate" style="background:#2ecc71;height:300px;padding:10px;"><a href=""><img src="{{asset('assets/images/statistics.png')}}" style="width:100%"></a></div>
+            <div class="col-md-4 rotate" style="background:#2ecc71;height:300px;padding:10px;"><a href="{{ URL::route("expense") }}"><img src="{{asset('assets/images/statistics.png')}}" style="width:100%"></a></div>
             <div class="col-md-4 rotate" style="background:#3498db;height:300px;padding:10px;"><a href="{{ URL::route("user/view") }}"><img src="{{asset('assets/images/users.png')}}" style="width:100%"></a></div>
             <div class="col-md-4 rotate" style="background:#e74c3c;height:300px;padding:10px;"><a href="{{ URL::route("tax/show") }}"><img src="{{asset('assets/images/tax.png')}}" style="width:100%"></a></div>
         </div>

@@ -102,6 +102,7 @@ class ExpenseController extends BaseController{
         $expense->delete();
 
         //redirect
+        Session::flash('message', 'La dépense a été supprimer avec success!');
         return Redirect::to('expense');
     }
 
