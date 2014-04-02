@@ -83,7 +83,7 @@ Route::group(["before" => "auth"], function()
         "uses" => "UserController@edit"
     ]);
 
-    Route::put("/user/update/{id}", [
+    Route::put("/user/{id}", [
         "as"   => "user",
         "uses" => "UserController@update"
     ]);
