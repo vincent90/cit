@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
 
-
+<div class="container">
 
 @if(Session::has('message'))
 <div id="dialog-succes" title="Basic dialog">
@@ -77,6 +77,8 @@
                 </div>
             </div>
     </div>
+</div>
+
 </div>
 
 @stop

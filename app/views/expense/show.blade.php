@@ -1,6 +1,6 @@
 @extends("layout")
 @section("content")
-
+<div class="containerModal">
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
@@ -14,6 +14,6 @@
 			<strong>Montant:</strong> {{ $expense->total }}<br>
 		</p>
 	</div>
-
+</div>
 
 @stop

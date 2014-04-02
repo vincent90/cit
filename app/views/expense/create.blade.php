@@ -1,6 +1,7 @@
 @extends("layout")
 @section("content")
 <!-- if there are creation errors, they will show here -->
+<div class="containerModal">
 {{ HTML::ul($errors->all()) }}
 
 {{ Form::open(array('url' => 'expense')) }}
@@ -29,7 +30,7 @@
 	{{ Form::submit('Ajouter la dépense', array('class' => 'btn btn-primary','required')) }}
 
 {{ Form::close() }}
-
+	</div>
 @stop
 
 @section("script")

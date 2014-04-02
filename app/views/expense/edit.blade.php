@@ -1,6 +1,6 @@
 @extends("layout")
 @section("content")
-
+<div class="containerModal">
 <h1>Edit {{ $expense->comments }}</h1>
 
 <!-- if there are creation errors, they will show here -->
@@ -33,5 +33,5 @@
 	{{ Form::submit('Modifier la dépense', array('class' => 'btn btn-primary')) }}
 
 {{ Form::close() }}
-
+	</div>
 @stop
