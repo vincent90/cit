@@ -1,8 +1,8 @@
 jQuery( document ).ready( function( $ ) {
 
-   /* $(function() {
-        $( "#dialog" ).dialog();
-    });*/
+    $(function() {
+        $( "#dialog-succes" ).dialog();
+    });
 
     $('.edit-link').click(function(){
         $.ajax({

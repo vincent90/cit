@@ -2,7 +2,7 @@
 @section("content")
 
 @if(Session::has('message'))
-<div id="dialog" title="Basic dialog">
+<div id="dialog-succes" title="Basic dialog">
   <p>{{ Session::get('message') }}</p>
 </div>
 @endif
@@ -45,8 +45,7 @@
                                 <a class="btn btn-small btn-success" href="{{ URL::to('user/' . $value->id) }}">Voir</a>
                             !-->
                             <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                            <a class="edit-link" href="{{ URL::to('user/' . $value->id . '/edit') }}"><button>Edit</button></a>
-                            <a class="btn btn-small btn-info" href="{{ URL::to('user/' . $value->id . '/edit') }}">Modifier</a>
+                            <a class="btn btn-small btn-info edit-link" href="{{ URL::to('user/' . $value->id . '/edit') }}">Modifier</a>
                         </td>
                     </tr>
                     @endforeach
