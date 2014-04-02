@@ -1,5 +1,6 @@
 @extends("layout")
 @section("content")
+<div class="container">
 <!--
     <h2>Bonjour {{ Auth::user()->username }}</h2>
     <p>Bienvenue à votre page de profil.</p>
@@ -35,5 +36,5 @@
         </div>
     </div> <!-- /container -->
 
-
+</div>
 @stop

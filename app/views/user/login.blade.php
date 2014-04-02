@@ -1,5 +1,6 @@
 @extends("layout")
 @section("content")
+<div class="container">
     {{ Form::open([
         "route"        => "user/login",
         "autocomplete" => "off",
@@ -20,6 +21,7 @@
             @endif
     {{ Form::submit("Connection",  array('class' => 'btn btn-lg btn-primary btn-block')) }}
     {{ Form::close() }}
+    </div>
 @stop
 @section("footer")
     @parent

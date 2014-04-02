@@ -1,5 +1,6 @@
 @extends("layout")
 @section("content")
+<div class="container">
 <div id="dialog-succes" title="Basic dialog">
     <p>{{ Session::get('message') }}</p>
 </div>
@@ -50,7 +51,7 @@
 
 		</div>
 
-
+</div>
 
 @stop
 @section("script")

@@ -1,6 +1,6 @@
 @extends("layout")
 @section("content")
-
+<div class="containerModal">
 <h1>Modification de :  {{ $user->username }}</h1>
 
 <!-- if there are creation errors, they will show here -->
@@ -22,6 +22,7 @@
 	{{ Form::submit('Modifier l\'usager', array('class' => 'btn btn-primary')) }}
 
 {{ Form::close() }}
+</div>
 
 
 @stop

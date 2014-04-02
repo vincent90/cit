@@ -1,5 +1,6 @@
 @extends("layout")
 @section("content")
+<div class="container">
     {{ Form::open([
         "route"        => "user/request",
         "autocomplete" => "off"
@@ -10,6 +11,7 @@
         ]) }}
         {{ Form::submit("reset") }}
     {{ Form::close() }}
+    </div>
 @stop
 @section("footer")
     @parent

@@ -1,5 +1,6 @@
 @extends("layout")
 @section("content")
+<div class="container">
     {{ Form::open([
         "url"          => URL::route("user/reset") . $token,
         "autocomplete" => "off"
@@ -38,6 +39,7 @@
         @endif
         {{ Form::submit("reset") }}
     {{ Form::close() }}
+    </div>
 @stop
 @section("footer")
     @parent
