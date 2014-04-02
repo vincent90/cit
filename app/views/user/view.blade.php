@@ -65,3 +65,8 @@
 </div>
 
 @stop
+
+@section("script")
+    @parent
+    {{HTML::script('js/user.js')}}
+@stop
