@@ -58,11 +58,21 @@
                 </tbody>
             </table>
             </div>
-
-            <div class="col-md-4 rotate" style="background:#e67e22;height:300px;padding:10px;">
-                <a class="edit-link" href="{{ URL::route("expense/create") }}">
-                    <img src="{{asset('assets/images/done.png')}}" style="width:100%">
-                </a>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12 rotate" style="background:#2ecc71;height:300px;padding:10px;">
+                        <a class="edit-link" href="{{ URL::route("expense/create") }}">
+                            <img src="{{asset('assets/images/addExpenses.png')}}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 rotate" style="background:#e67e22;height:300px;padding:10px;">
+                        <a href="{{ URL::route("user/profile") }}">
+                            <img src="{{asset('assets/images/back.png')}}" style="width:100%">
+                        </a>
+                    </div>
+                </div>
             </div>
     </div>
 </div>
