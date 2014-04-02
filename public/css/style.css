@@ -176,7 +176,7 @@ progress, progress[role] {
   margin-top: 5px !important;
 }
 .skill ::-webkit-progress-value {
-  -webkit-animation: bar-fill 2s;
+  -webkit-animation: bar-fill 5s;
   width: 0px;
 }
 
