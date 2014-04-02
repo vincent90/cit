@@ -10,7 +10,7 @@ jQuery( document ).ready( function( $ ) {
             url: $(this).attr('href')
         }).done(function(html_form) {
             $('#dialog').html(html_form);
-            $('#dialog').dialog();
+            $('#dialog').dialog({width : 1000, modal : true, title : "Modification"});
 
         });
         return false;

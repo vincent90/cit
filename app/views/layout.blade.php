@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
 		{{ HTML::style('css/bootstrap.min.css') }}
 		{{ HTML::style('css/style.css') }}
-		{{ HTML::style('//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css') }}
+		{{ HTML::style('css/ui-lightness/jquery-ui-1.10.4.custom.min.css') }}
 
         <title>
             Tutorial
