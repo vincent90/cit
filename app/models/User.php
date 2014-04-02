@@ -20,4 +20,9 @@ class User
     {
         return $this->email;
     }
+
+    public function getRole()
+    {
+        return $this->role;
+    }
 }

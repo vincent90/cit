@@ -27,10 +27,10 @@ Route::group(["before" => "auth"], function()
     ]);
 
     Route::post("/expense", [
-        "as"   => "expense/view",
+        /*"as"   => "expense/view",*/
         "uses" => "ExpenseController@addExpense"
     ]);
-    Route::get("/expense", [
+    Route::get("/expense/view", [
         "as"   => "expense/view",
         "uses" => "ExpenseController@getInfo"
     ]);
