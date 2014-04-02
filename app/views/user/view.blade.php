@@ -1,6 +1,12 @@
 @extends("layout")
 @section("content")
 
+@if(Session::has('message'))
+<div id="dialog" title="Basic dialog">
+  <p>{{ Session::get('message') }}</p>
+</div>
+@endif
+
 <div class="row">
     <div class="col-md-4"><img src="{{asset('assets/images/CiternesExpert.png')}}" style="width:100%;"></div>
     <div class="col-md-4 col-md-offset-4"><a href = "{{ URL::route("user/logout") }}"class="btn btn-lg btn-primary btn-block btn-flat" type="submit">Logout</button></a></div>
